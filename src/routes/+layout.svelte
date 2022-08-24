@@ -1,4 +1,10 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+    nav, .layout-wrapper {
+        font-family: 'Lato', sans-serif;
+    }
+    
     nav {
         display: flex;
     }
@@ -14,4 +20,6 @@
     <a href="/minis">Minis</a>
 </nav>
 
-<slot />
+<div class="layout-wrapper">
+    <slot />
+</div>
