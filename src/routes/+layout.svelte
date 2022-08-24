@@ -3,6 +3,9 @@
 
     .wrapper {
         font-family: 'Lato', sans-serif;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
     }
 </style>
 
