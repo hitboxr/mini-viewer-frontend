@@ -11,10 +11,11 @@
         max-width: 16rem;
         max-height: 20rem;
 
-        background-color: rgb(233, 233, 233);
+        background-color: var(--color-light-1);
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 3px 5px 1px lightgray;
+        box-shadow: 0 3px 5px 1px var(--color-gray-1);
+        color: darkgreen;
     }
 
     .preview-image {

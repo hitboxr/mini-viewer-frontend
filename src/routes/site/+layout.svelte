@@ -4,7 +4,7 @@
         padding: 1rem 2rem;
         border-bottom: 1px rgb(189, 189, 189) solid;
         box-shadow: 0 1px 2px rgb(189, 189, 189);
-        background-color: paleturquoise;
+        background-color: var(--color-primary-1);
         color: white;
     }
     
@@ -18,6 +18,7 @@
 
     .site-wrapper {
         margin: 0 2rem;
+        padding-bottom: 3rem;
     }
 
     footer {
@@ -27,7 +28,7 @@
         bottom: 0;
         width: 100%;
         height: 3rem;
-        color: rgb(189, 189, 189);
+        color: var(--color-dark-2);
     }
 
     .footer-text {

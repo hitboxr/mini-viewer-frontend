@@ -1,6 +1,7 @@
 <style>
     button {
-        background-color: turquoise;
+        width: 100%;
+        background-color: var(--color-primary-1);
         border: none;
         border-radius: 2rem;
         color: white;

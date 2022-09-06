@@ -5,8 +5,9 @@
 <style>
     header, main {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
         justify-content: center;
+        align-items: center;
         max-width: 100%;
     }
 
@@ -31,15 +32,15 @@
     }
 
     ul {
-        width: auto;
+        width: 20%;
+        min-width: 16rem;
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
     li {
-        flex-basis: 0;
-        flex-grow: 1;
+        width: 100%;
         padding-bottom: 2rem;
     }
 
@@ -57,7 +58,7 @@
 <main>
     <ul>
         <li><a href="/site/minis"><Button>Minis</Button></a></li>
-        <li><Button><a href="/site/about">About this site</a></Button></li>
-        <li><Button>Other pages in the future?</Button></li>
+        <li><a href="/site/about"><Button>About this site</Button></a></li>
+        <li><Button>Fake link</Button></li>
     </ul>
 </main>
