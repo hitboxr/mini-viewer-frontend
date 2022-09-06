@@ -56,7 +56,7 @@
 </header>
 <main>
     <ul>
-        <li><Button><a href="/site/minis">Minis</a></Button></li>
+        <li><a href="/site/minis"><Button>Minis</Button></a></li>
         <li><Button><a href="/site/about">About this site</a></Button></li>
         <li><Button>Other pages in the future?</Button></li>
     </ul>

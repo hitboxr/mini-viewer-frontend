@@ -12,6 +12,10 @@
         font-weight: 700;
         letter-spacing: 0.2rem;
     }
+
+    button:hover {
+        cursor: pointer;
+    }
 </style>
 
 <button>
