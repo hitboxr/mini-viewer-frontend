@@ -16,7 +16,7 @@
         letter-spacing: 0.1rem;
     }
 
-    .layout-wrapper {
+    .site-wrapper {
         margin: 0 2rem;
     }
 
@@ -41,10 +41,10 @@
     <a href="/site/minis">Minis</a>
 </nav>
 
-<div class="layout-wrapper">
+<div class="site-wrapper">
     <slot />
 </div>
 
 <footer>
-    <p class="footer-text">John n Forrest. 2022.</p>
+    <p class="footer-text">John &amp; Forrest 2022</p>
 </footer>
