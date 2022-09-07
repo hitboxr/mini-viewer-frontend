@@ -19,9 +19,29 @@
             "name": "Spelljamming ship",
             "description": "Take to the Astral Sea in a spelljamming ship. This model comes in both normal scale and ship-scale. Spelljamming chair not included.",
             "imageURL": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/05/Dungeons-Dragons-Spelljammer-Galleon-Cover.jpg",
-        }
+        },
+        {
+            "id": "m4",
+            "name": "Sand Mephit",
+            "description": "This high-detailed model was part of our 2022 release on Patreon. If you are interested in seeing the full set, please visit our store.",
+            "imageURL": "https://cdn2.myminifactory.com/assets/object-assets/6318b5b15f2e7/images/720X720-2267-sand-mephit-spear-medium.jpg",
+        },
+        {
+            "id": "m5",
+            "name": "Shady Fortune Teller Treasure",
+            "description": "You can aslo support us on Patreon to get the models much earlier.",
+            "imageURL": "https://cdn2.myminifactory.com/assets/object-assets/6317ddc151013/images/720X720-2258-shady-fortune-teller-treasure-medium.jpg",
+        },
     ]
 </script>
 
-<h1>Minis</h1>
-<DisplayGrid {minis} />
+<style>
+
+</style>
+
+
+<div class="minis-display-wrapper">
+    <h1>Minis</h1>
+    <DisplayGrid {minis} />
+</div>
+

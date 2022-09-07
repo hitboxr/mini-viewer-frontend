@@ -14,7 +14,7 @@
         color: black;
         padding: 0;
         margin: 0;
-        max-width: 100%;
+        width: 100%;
     }
 </style>
 

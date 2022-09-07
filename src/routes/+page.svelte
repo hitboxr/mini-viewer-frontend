@@ -33,6 +33,7 @@
 
     ul {
         width: 20%;
+        max-width: 20rem;
         min-width: 16rem;
         list-style: none;
         margin: 0;
