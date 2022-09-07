@@ -52,6 +52,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>Mini City</title>
+</svelte:head>
+
 <header>
     <h1>Mini City</h1>
     <p>A menagerie of 3D models for tabletop gameplay</p>

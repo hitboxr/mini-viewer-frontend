@@ -39,6 +39,9 @@
 
 </style>
 
+<svelte:head>
+    <title>Minis</title>
+</svelte:head>
 
 <div class="minis-display-wrapper">
     <h1>Minis</h1>
