@@ -1,12 +1,15 @@
 <script>
     export let data;
 
-    // long descriptions overflow the card and it looks bad
-    $: truncDescription = data.description.length < 85 ? data.description : `${data.description.slice(0,85)}...`
+    // avoid long descriptions overflowing their card (85 is arbitrary but works well so far)
+    $: truncDescription = data.description.length < 85 
+        ? data.description 
+        : `${data.description.slice(0, 85)}...`
 </script>
 
 <style>
     .card {
+        box-sizing: border-box;
         flex-grow: 0 0 auto;
         max-width: 16rem;
         max-height: 20rem;
@@ -20,7 +23,6 @@
     }
 
     .preview-image {
-        width: 100%;
         height: 10rem;
     }
 

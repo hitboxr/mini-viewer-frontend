@@ -11,7 +11,7 @@
         display: inline-block;
         font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0.2rem;
+        /* letter-spacing: 0.2rem; */
     }
 
     button:hover {
