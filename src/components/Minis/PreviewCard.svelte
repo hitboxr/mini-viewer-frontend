@@ -2,9 +2,9 @@
     export let data;
 
     // avoid long descriptions overflowing their card (85 is arbitrary but works well so far)
-    $: truncDescription = data.description.length < 85 
-        ? data.description 
-        : `${data.description.slice(0, 85)}...`
+    // $: truncDescription = data.description.length < 85 
+    //     ? data.description 
+    //     : `${data.description.slice(0, 85)}...`
 </script>
 
 <style>
@@ -46,7 +46,9 @@
 <div class="card">
     <h2>{data.name}</h2>
     <div class="preview-image">
-        <img src="{data.imageURL}" alt="{data.description}">
+        <!-- TODO: Better image handling (what if a mini has no images?) -->
+        <img src="{data.mini_images[0]}" alt="{data.description}">
     </div>
-    <p>{truncDescription}</p>
+    <!-- TODO: Either serve description in mini list view or change card format -->
+    <p>{data.name}</p>
 </div>
