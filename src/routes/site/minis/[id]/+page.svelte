@@ -1,6 +1,4 @@
 <script>
-    import Button from '../../../../components/UI/Button.svelte';
-
     /** @type {import('./$types').PageData} */
     export let data;
 
