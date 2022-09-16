@@ -7,11 +7,12 @@
         day: "numeric"
     }
 
-    let name = data.name;
-    let images = data.mini_images;
-    let dateUpdated = new Date(data.modified)
+    const id = data.id;
+    const name = data.name;
+    const images = data.mini_images;
+    const dateUpdated = new Date(data.modified)
         .toLocaleDateString('en-US', dateOptions);
-    let detailsURL = data.url;
+    const detailsURL = data.url;
 
     // get a list of the unique images, regardless of file extension
     $: imageNames = images.map((filepath) => filepath.replace(/\.[^/.]+$/, ""))
@@ -24,6 +25,7 @@
     }
 
     .card {
+        position: relative;
         box-sizing: border-box;
         display: flex;
         flex-flow: column nowrap;
@@ -37,8 +39,14 @@
         overflow: hidden;
         box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
         color: black;
-
         overflow: visible;
+        transition: all .2s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+        cursor: pointer;
     }
 
     .preview-image {
@@ -79,15 +87,28 @@
         font-size: 1.2rem;
         color: var(--color-gray);
     }
+
+    .details-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 </style>
 
 <div class="card">
     <div class="preview-image">
-        <!-- TODO: Better image handling (what if a mini has no images?) -->
-        <img src="{data.mini_images[0]}" alt="{data.name}">
+        {#if images}
+            <img src="{images[0]}" alt="{name}">
+        {:else}
+            <img src="https://via.placeholder.com/300.jpg" alt="A blank placeholder">
+        {/if}
     </div>
     <div class="preview-text">
-        <h3>{data.name}</h3>
+        <h3>{name}</h3>
         <p class="last-updated">Last updated: {dateUpdated}</p>
     </div>
+    <a href="#/{id}"><span class="details-link"></span></a>
 </div>
