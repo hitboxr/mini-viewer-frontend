@@ -33,6 +33,7 @@
         margin: 0 auto;
         max-width: 940px;
         padding: 0 2rem;
+        padding-bottom: var(--footer-height);
     }
 
     footer {
@@ -42,18 +43,16 @@
         bottom: 0;
         width: 100%;
         height: var(--footer-height);
-        color: var(--color-dark-2);
+        color: var(--color-gray);
     }
 
     .footer-text {
-        margin: 1rem;
+        margin: 2rem;
     }
 
     @media screen and (max-width: 940px) {
         main {
             max-width: 100%;
-            padding: 0 2rem;
-            padding-bottom: var(--footer-height);
         }
     }
 </style>

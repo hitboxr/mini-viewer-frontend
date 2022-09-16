@@ -1,11 +1,12 @@
 <style>
     button {
-        width: 100%;
+        /* width: 100%; */
+        min-width: 20rem;
         background-color: var(--color-primary);
         border: none;
         border-radius: 10rem;
         color: white;
-        padding: 1.5rem 3rem;
+        padding: 1% 2%;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -19,6 +20,6 @@
     }
 </style>
 
-<button>
+<button on:click>
     <slot />
 </button>
