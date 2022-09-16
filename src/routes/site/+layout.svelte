@@ -16,7 +16,7 @@
         padding: 2rem 3rem;
         border-bottom: 1px rgb(189, 189, 189) solid;
         box-shadow: 0 1px 2px rgb(189, 189, 189);
-        background-color: var(--color-primary-1);
+        background-color: var(--color-primary);
         color: white;
         font-size: var(--font-size-default);
     }

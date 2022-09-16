@@ -1,7 +1,7 @@
 <style>
     button {
         width: 100%;
-        background-color: var(--color-primary-1);
+        background-color: var(--color-primary);
         border: none;
         border-radius: 10rem;
         color: white;
