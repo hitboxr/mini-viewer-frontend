@@ -3,17 +3,22 @@
         --footer-height: 3rem;
     }
 
+    * {
+        font-size: var(--font-size-default);
+    }
+
     nav {
         box-sizing: border-box;
         display: flex;
         justify-content: center;
         width: 100%;
         margin: 0 auto;
-        padding: 1rem 2rem;
+        padding: 2rem 3rem;
         border-bottom: 1px rgb(189, 189, 189) solid;
         box-shadow: 0 1px 2px rgb(189, 189, 189);
         background-color: var(--color-primary-1);
         color: white;
+        font-size: var(--font-size-default);
     }
     
     nav a {
@@ -25,9 +30,7 @@
     }
 
     main {
-        display: flex;
-        justify-content: center;
-        margin: auto;
+        margin: 0 auto;
         max-width: 940px;
         padding: 0 2rem;
     }

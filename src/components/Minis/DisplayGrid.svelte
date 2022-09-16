@@ -13,7 +13,7 @@
         justify-content: flex-start;
         align-items: stretch;
         align-content: flex-start;
-        gap: 1.4rem;
+        gap: 2.5rem 2rem;
     }
 </style>
 

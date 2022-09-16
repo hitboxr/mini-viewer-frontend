@@ -9,6 +9,8 @@
         justify-content: center;
         align-items: center;
         max-width: 100%;
+        font-size: var(--font-size-default);
+
     }
 
     header > *, main > * {
@@ -18,7 +20,7 @@
     }
 
     header {
-        padding-bottom: 0.7rem;
+        padding-bottom: 1.2rem;
         border-bottom: 1px rgb(189, 189, 189) solid;
         box-shadow: 0 2px 4px 0 rgb(189, 189, 189);
     }
@@ -28,13 +30,13 @@
     }
 
     main {
-        margin: 4rem auto;
+        margin: 6rem auto;
     }
 
     ul {
         width: 20%;
-        max-width: 20rem;
-        min-width: 16rem;
+        max-width: 30rem;
+        min-width: 20rem;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -42,7 +44,7 @@
 
     li {
         width: 100%;
-        padding-bottom: 2rem;
+        padding-bottom: 2.5rem;
     }
 
     a {

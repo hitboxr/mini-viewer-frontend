@@ -1,29 +1,43 @@
 <script>
     export let data;
 
-    // avoid long descriptions overflowing their card (85 is arbitrary but works well so far)
-    // $: truncDescription = data.description.length < 85 
-    //     ? data.description 
-    //     : `${data.description.slice(0, 85)}...`
+    let name = data.name;
+    let images = data.mini_images;
+    let dateUpdated = data.modified;
+    let detailsURL = data.url;
+
+    // get a list of the unique images, regardless of file extension
+    $: imageNames = images.map((filepath) => filepath.replace(/\.[^/.]+$/, ""))
+    $: uniqueImages = [... new Set(imageNames)];
 </script>
 
 <style>
+    :root {
+        --card-border-radius: 1rem;
+    }
+
     .card {
         box-sizing: border-box;
         flex-grow: 0 0 auto;
-        max-width: 16rem;
-        max-height: 20rem;
+        width: 30rem;
+        height: 42rem;
 
         background-color: rgb(234, 241, 233);
-        border: 2px solid var(--color-light-1);
-        border-radius: 10px;
+        /* border: 2px solid var(--color-light-1); */
+        border-radius: var(--card-border-radius);
         overflow: hidden;
-        box-shadow: 0 3px 5px 1px rgb(234, 241, 233);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
         color: black;
+
+        overflow: visible;
     }
 
     .preview-image {
-        height: 10rem;
+        border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
+        height: 70%;
+        overflow: hidden;
+
+        image-rendering: crisp-edges;
     }
 
     .preview-image img {
@@ -33,21 +47,15 @@
         object-position: 50% 20%;
     }
 
-    h2, p {
+    p {
         padding: 0 1rem;
-    }
-
-    h2 {
-        margin: 1rem 0;
-        text-transform: capitalize;
     }
 </style>
 
 <div class="card">
-    <h2>{data.name}</h2>
     <div class="preview-image">
         <!-- TODO: Better image handling (what if a mini has no images?) -->
-        <img src="{data.mini_images[0]}" alt="{data.description}">
+        <img src="{data.mini_images[0]}" alt="{data.name}">
     </div>
     <!-- TODO: Either serve description in mini list view or change card format -->
     <p>{data.name}</p>
