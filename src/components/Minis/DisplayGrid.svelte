@@ -4,10 +4,12 @@
 
     export let minis;
 
+    const pageLengthOptions = [12, 30, 60];
+
     let numOnPage = 30;
     let currentPage = 0;
-    let maxPages = Math.ceil(minis.length / numOnPage);
 
+    $: maxPages = Math.ceil(minis.length / numOnPage);
     $: currentPageStartIndex = currentPage * numOnPage
     $: minisToShow = (currentPageStartIndex + numOnPage) <= minis.length
         ? minis.slice(currentPageStartIndex, currentPageStartIndex + numOnPage)
@@ -44,18 +46,34 @@
         width: 100%;
     }
 
+    .page-length-selector {
+        margin-bottom: 2rem;
+    }
+
+    .page-length-selector p {
+        display: inline-block;
+    }
+
     p {
         padding: 0 2rem;
     }
 </style>
 
+<div class="page-length-selector">
+    <p><strong>Results per page: </strong></p>
+    <select bind:value={numOnPage} on:change={() => currentPage = 0}>
+        {#each pageLengthOptions as num}
+            <option value={num}>{num}</option>
+        {/each}
+    </select>
+</div>
 <div class="display-grid">
     {#each minisToShow as mini (mini.id)}
         <PreviewCard data={mini} />
     {/each}
     <div class="display-grid-controls">
         <button on:click={previousPage}>&larr; Previous page</button>
-        <p><strong>Current page: {currentPage + 1}/{maxPages}</strong></p>
+        <p><strong>Current page: {currentPage + 1} of {maxPages}</strong></p>
         <button on:click={nextPage}>Next page &rarr;</button>
     </div>
 </div>
