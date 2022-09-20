@@ -110,5 +110,5 @@
         <h3>{name}</h3>
         <p class="last-updated">Last updated: {dateUpdated}</p>
     </div>
-    <a href="#/{id}"><span class="details-link"></span></a>
+    <a href="/site/minis/{id}"><span class="details-link"></span></a>
 </div>
