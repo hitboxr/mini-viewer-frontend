@@ -76,7 +76,20 @@
     }
 
     h3 {
+        display: inline-block;
         margin-bottom: .8rem;
+        width: fit-content;
+        padding: .1rem 0;
+
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-black-matte) 50%);
+        background-size: 210%;
+        transition: all .4s;
+    }
+
+    .card:hover h3 {
+        color: var(--color-gray-light-2);
+        background-position: 100%;
+        padding: .1rem .5rem;
     }
 
     p {

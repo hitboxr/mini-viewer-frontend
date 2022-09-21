@@ -3,8 +3,11 @@
 
     :global(html) {
         --color-primary: #7DCD85;
+        --color-black: #000;
+        --color-black-matte: #28282B;
         --color-gray: #777;
         --color-gray-light: whitesmoke;
+        --color-gray-light-2: #eee;
         --color-white: #fff;
 
         --font-size-default: 1.6rem;
