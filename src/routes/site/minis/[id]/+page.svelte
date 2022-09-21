@@ -14,6 +14,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>{details.name}</title>
+</svelte:head>
+
 <img src="{details.mini_images[0]}" alt="altText">
 <p>Name: {details.name}</p>
 <p>Pack: {details.pack.pack_name}</p>
