@@ -13,10 +13,6 @@
     const dateUpdated = new Date(data.modified)
         .toLocaleDateString('en-US', dateOptions);
     const detailsURL = data.url;
-
-    // get a list of the unique images, regardless of file extension
-    $: imageNames = images.map((filepath) => filepath.replace(/\.[^/.]+$/, ""))
-    $: uniqueImages = [... new Set(imageNames)];
 </script>
 
 <style>
