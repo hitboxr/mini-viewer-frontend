@@ -59,8 +59,8 @@
 
 <nav>
     <a href="/">Home</a>
-    <a href="/site/about">About</a>
-    <a href="/site/minis">Minis</a>
+    <a href="/about">About</a>
+    <a href="/minis">Minis</a>
 </nav>
 
 <main>

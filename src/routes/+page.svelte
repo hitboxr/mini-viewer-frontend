@@ -64,8 +64,8 @@
 </header>
 <main>
     <ul>
-        <li><a href="/site/minis"><Button>Minis</Button></a></li>
-        <li><a href="/site/about"><Button>About this site</Button></a></li>
+        <li><a href="/minis"><Button>Minis</Button></a></li>
+        <li><a href="/about"><Button>About this site</Button></a></li>
         <li><Button>Fake link</Button></li>
     </ul>
 </main>
