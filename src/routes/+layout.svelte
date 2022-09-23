@@ -24,6 +24,11 @@
         margin: 0;
         width: 100%;
     }
+
+    :global(::selection) {
+        background: var(--color-primary);
+        color: var(--color-gray-light);
+    }
 </style>
 
 <div class="page-container">
