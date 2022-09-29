@@ -69,7 +69,7 @@
 </div>
 <div class="display-grid">
     {#each minisToShow as mini (mini.id)}
-        <PreviewCard data={mini} />
+        <PreviewCard {mini} />
     {/each}
     <div class="display-grid-controls">
         <button on:click={previousPage}>&larr; Previous page</button>

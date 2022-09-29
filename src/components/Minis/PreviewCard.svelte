@@ -1,5 +1,5 @@
 <script>
-    export let data;
+    export let mini;
 
     const dateOptions = {
         year: "numeric",
@@ -7,12 +7,10 @@
         day: "numeric"
     }
 
-    const id = data.id;
-    const name = data.name;
-    const images = data.mini_images;
-    const dateUpdated = new Date(data.modified)
-        .toLocaleDateString('en-US', dateOptions);
-    const detailsURL = data.url;
+    const id = mini.id;
+    const name = mini.name;
+    const images = mini.mini_images;
+    const dateUpdated = new Date(mini.modified).toLocaleDateString('en-US', dateOptions);
 </script>
 
 <style>
