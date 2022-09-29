@@ -25,7 +25,7 @@
         box-sizing: border-box;
         display: flex;
         flex-flow: column nowrap;
-        flex-grow: 0 0 auto;
+        flex-grow: 0 0 auto;    
         width: 30rem;
         height: 42rem;
 
@@ -39,7 +39,8 @@
         transition: all .2s;
     }
 
-    .card:hover {
+    .card:hover,
+    .card:focus {
         transform: scale(1.02);
         box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
         cursor: pointer;
@@ -82,7 +83,8 @@
         transition: all .4s;
     }
 
-    .card:hover h3 {
+    .card:hover h3,
+    .card:focus h3 {
         color: var(--color-gray-light-2);
         background-position: 100%;
         padding: .1rem .5rem;
