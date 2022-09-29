@@ -1,10 +1,23 @@
 <style>
     :root {
-        --footer-height: 3rem;
+        --footer-height: 5rem;
     }
 
     * {
         font-size: var(--font-size-default);
+    }
+
+    .wrapper::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: 
+            url("$lib/assets/images/dice-bg-1.png"),
+            url("$lib/assets/images/dice-bg-2.png");
+        z-index: -1;
     }
 
     nav {
@@ -57,16 +70,18 @@
     }
 </style>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/minis">Minis</a>
-</nav>
-
-<main>
-    <slot /> 
-</main>
-
-<footer>
-    <p class="footer-text">John &amp; Forrest 2022</p>
-</footer>
+<div class="wrapper">
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/minis">Minis</a>
+    </nav>
+    
+    <main>
+        <slot /> 
+    </main>
+    
+    <footer>
+        <p class="footer-text">John &amp; Forrest 2022</p>
+    </footer>
+</div>

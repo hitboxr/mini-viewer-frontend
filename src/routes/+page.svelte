@@ -1,62 +1,41 @@
 <script>
-    import Button from "$components/UI/Button.svelte";
+    let minisLinkHover = false;
+
+    function activateBackground() {
+        minisLinkHover = true;
+    }
+    
+    function deactivateBackground() {
+        minisLinkHover = false;
+    }
 </script>
 
 <style>
-    /* header, main {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
-        font-size: var(--font-size-default);
-
-    }
-
-    header > *, main > * {
-        text-align: center;
-        flex-grow: 1;
-        width: 100%;
-    }
-
-    header {
-        padding-bottom: 1.2rem;
-        border-bottom: 1px rgb(189, 189, 189) solid;
-        box-shadow: 0 2px 4px 0 rgb(189, 189, 189);
-    }
-    
-    header > p {
-        margin-top: 0;
-    }
-
-    main {
-        margin: 6rem auto;
-    }
-
-    ul {
-        width: 20%;
-        max-width: 30rem;
-        min-width: 20rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        width: 100%;
-        padding-bottom: 2.5rem;
-    }
-
-    a {
-        color: inherit;
-        text-decoration: none;
-        text-transform: uppercase;
-    } */
     .homepage {
+        position: relative;
         min-height: 100vh;
-        background-color: var(--color-black-matte);
         color: var(--color-gray-light);
         text-align: center;
+        overflow: hidden;
+        background-color: var(--color-black-matte);
+        transition: all 1s;
+    }
+
+    .homepage::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: 
+            url("$lib/assets/images/dice-bg-1.png"),
+            url("$lib/assets/images/dice-bg-2.png");
+        z-index: -1;
+    }
+
+    .minisLinkHover {
+        background-color: rgba(40, 40, 43, .5);
     }
 
     header {
@@ -76,8 +55,17 @@
         font-size: 2rem;
     }
 
+    hr {
+        display: block;
+        margin-top: 3rem;
+        border: none;
+        border-top: 1px solid var(--color-primary);
+        max-width: 940px;
+        width: 80%;
+    }
+
     nav {
-        padding-top: 15vh;
+        padding-top: 4vh;
     }
 
     ul {
@@ -127,27 +115,28 @@
     <title>Mini City</title>
 </svelte:head>
 
-<!-- <header>
-    <h1>Mini City</h1>
-    <p>A menagerie of 3D models for tabletop gameplay</p>
-</header>
-<main>
-    <ul>
-        <li><a href="/minis"><Button>Minis</Button></a></li>
-        <li><a href="/about"><Button>About this site</Button></a></li>
-        <li><Button>Fake link</Button></li>
-    </ul>
-</main> -->
-
-<div class="homepage">
+<div class="homepage" class:minisLinkHover>
     <header>
         <h1>Mini City</h1>
         <h3>A menagerie of 3D models for tabletop gameplay</h3>
+        <hr>
     </header>
     <nav>
         <ul>
-            <li><a href="/minis">Browse minis</a></li>
-            <li><a href="/about">About this site</a></li>
+            <li>
+                <a href="/minis" 
+                    on:mouseenter={activateBackground}
+                    on:focus={activateBackground}
+                    on:mouseleave={deactivateBackground}
+                    on:blur={deactivateBackground}>
+                    Browse minis
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    About this site
+                </a>
+            </li>
         </ul>
     </nav>
 </div>
