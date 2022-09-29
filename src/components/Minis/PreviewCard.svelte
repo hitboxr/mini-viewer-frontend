@@ -13,10 +13,6 @@
     const dateUpdated = new Date(data.modified)
         .toLocaleDateString('en-US', dateOptions);
     const detailsURL = data.url;
-
-    // get a list of the unique images, regardless of file extension
-    $: imageNames = images.map((filepath) => filepath.replace(/\.[^/.]+$/, ""))
-    $: uniqueImages = [... new Set(imageNames)];
 </script>
 
 <style>
@@ -29,7 +25,7 @@
         box-sizing: border-box;
         display: flex;
         flex-flow: column nowrap;
-        flex-grow: 0 0 auto;
+        flex-grow: 0 0 auto;    
         width: 30rem;
         height: 42rem;
 
@@ -43,7 +39,8 @@
         transition: all .2s;
     }
 
-    .card:hover {
+    .card:hover,
+    .card:focus {
         transform: scale(1.02);
         box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
         cursor: pointer;
@@ -86,7 +83,8 @@
         transition: all .4s;
     }
 
-    .card:hover h3 {
+    .card:hover h3,
+    .card:focus h3 {
         color: var(--color-gray-light-2);
         background-position: 100%;
         padding: .1rem .5rem;
@@ -123,5 +121,5 @@
         <h3>{name}</h3>
         <p class="last-updated">Last updated: {dateUpdated}</p>
     </div>
-    <a href="/site/minis/{id}"><span class="details-link"></span></a>
+    <a href="/minis/{id}"><span class="details-link"></span></a>
 </div>
