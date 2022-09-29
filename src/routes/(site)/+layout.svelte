@@ -75,6 +75,7 @@
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/minis">Minis</a>
+        <a href="/packs">Packs</a>
     </nav>
     
     <main>
