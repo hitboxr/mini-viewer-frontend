@@ -1,5 +1,5 @@
 <script>
-    import magnifyingGlass from '$lib/assets/icons/magnifying-glass-50.png';
+    import lookCloserIcon from '$lib/assets/icons/magnifying-glass-50.png';
 
     // TODO: change data format to include alt text
     export let images = [];  // list of URLs
@@ -73,7 +73,7 @@
         filter: brightness(50%);
     }
 
-    .magnifying-glass {
+    .look-closer-icon {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -84,7 +84,7 @@
         transition: all .2s;
     }
 
-    .image-button:hover .magnifying-glass {
+    .image-button:hover .look-closer-icon {
         transform: translate(-50%, -50%);
         opacity: 1;
     }
@@ -118,7 +118,7 @@
         {#each images as image}
             <button class="image-button" on:click={setActiveImage}>
                 <img src="{image}" alt="" class="selector-image" class:selected="{activeImage === image}">
-                <img src="{magnifyingGlass}" alt="" class="magnifying-glass">
+                <img src="{lookCloserIcon}" alt="" class="look-closer-icon">
             </button>
         {/each}
     </div>
