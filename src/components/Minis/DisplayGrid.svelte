@@ -34,16 +34,9 @@
         justify-content: center;
         justify-items: center;
         gap: 2.5rem 2rem;
-
-        /* display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: stretch;
-        align-content: flex-start;
-        gap: 2.5rem 2rem; */
     }
 
-    .display-grid-controls {
+    /* .display-grid-controls {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -61,7 +54,7 @@
 
     p {
         padding: 0 2rem;
-    }
+    } */
 </style>
 
 <!-- <div class="page-length-selector">
