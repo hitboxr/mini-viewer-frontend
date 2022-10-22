@@ -77,7 +77,7 @@
         padding: .1rem 0;
 
         background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-black-matte) 50%);
-        background-size: 210%;
+        background-size: 220%;
         transition: all .4s;
     }
 
