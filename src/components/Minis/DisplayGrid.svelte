@@ -29,12 +29,18 @@
 
 <style>
     .display-grid {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 30rem);
+        justify-content: center;
+        justify-items: center;
+        gap: 2.5rem 2rem;
+
+        /* display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: stretch;
         align-content: flex-start;
-        gap: 2.5rem 2rem;
+        gap: 2.5rem 2rem; */
     }
 
     .display-grid-controls {
