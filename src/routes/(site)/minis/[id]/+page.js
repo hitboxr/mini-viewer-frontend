@@ -1,7 +1,7 @@
 import { variables } from '$lib/variables';
 
 /** @type {import('./types').PageLoad} */
-export async function load({ params }) {
+export async function load({ fetch, params }) {
     const url = `${variables.basePath}/minis/${params.id}`
     const res = await fetch(url ,{
         headers: {"Accept": "application/json"}

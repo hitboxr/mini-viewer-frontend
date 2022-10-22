@@ -3,6 +3,10 @@
 
     /** @type {import('./$types').PageData} */
     export let data;
+
+    $: miniData = data.minis;
+    $: count = miniData.count;
+    $: minis = miniData.results;
 </script>
 
 <style>
@@ -22,6 +26,6 @@
 <div class="minis-display-wrapper">
     <h1>Minis</h1>
     <hr>
-    <DisplayGrid minis={data.minis} />
+    <DisplayGrid previews={minis}/>
 </div>
 
